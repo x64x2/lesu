@@ -1,15 +1,15 @@
-lesu
-=====
 
-A C++ clone of the classic Super Mario Bros.
 
-![lesu](https://github.com/user-attachments/assets/4f7a6744-6114-41aa-8c49-513f84d32eaa)
+tordrop is a bash script to modify IPTABLES rules to prevent Tor users (see <http://www.torproject.org/>) from connecting to your host
 
-Compiling
----------
-You will need a compiler supporting C++11.
-So far, only gcc on trisquel has been used, although the code is very portable.
+## installation
 
-Resources
----------
-Todo
+iptables, ipset and wget must be installed so that this programm can be executed.
+
+as iptables and ipset are called, this program must be executed by root.
+
+as Tor exit nodes are continually renewed, you should run this program with root crontab.
+
+One execution every 20 minutes may be a good frequency and the crontab instruction should look like this 
+
+> :*/20 * * * * /path/to/tor-dropper.sh
